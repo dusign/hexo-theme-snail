@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<%- partial('_partial/head') %>
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <% if(config['bg_effects']['enable']){ %>
+        <!-- background effects start -->
+        <% if(config['bg_effects']['star']['enable']){ %>
+            <%- partial('_partial/star.ejs') %>
+        <% } %>
+        <!-- background effects end -->
+    <% } %>
+
+	<%- partial('_partial/header',{cache: true}) %>
+	
+    <%- partial('_partial/nav',{cache: true}) %>
+
+    <!-- Main Content -->
+    <%- body %>
+
+    <!-- Footer -->
+    <%- partial('_partial/footer') %>
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    <% if(config['bg_effects']['enable']){ %>
+        <!-- background effects start -->
+        <% if(config['bg_effects']['line']['enable']){ %>
+            <!--<script type="text/javascript" color="<%= config.bg_effects.color %>" pointColor="<%= config.bg_effects.pointColor %>" opacity='<%= config.bg_effects.opacity %>' zIndex="<%= config.bg_effects.zIndex %>" count="<%= config.bg_effects.count %>" src="/js/canvas-nest.js"></script>-->
+            <script type="text/javascript" src="/js/line.js"></script>
+        <% } %>
+
+        <% if(config['bg_effects']['mouse_click']['enable']){ %>
+            <script type="text/javascript" src="/js/mouse-click.js" content='[<%= config.bg_effects.mouse_click.content %>]' color='[<%= config.bg_effects.mouse_click.color %>]'></script>
+        <% } %>
+
+        <!-- background effects end -->
+    <% } %>
+
+</body>
+
+</html>
