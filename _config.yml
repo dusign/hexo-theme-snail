@@ -4,7 +4,6 @@
 
 # Site
 title: Super Snail
-# subtitle: Your story may not have such a happy beginning, but that doesn't make who you are. It is the rest of your story, who you choose to be.
 subtitle: At the bottom of the well, it is destined to see only the sky at the wellhead. 
           However, the starting point only affects the process of reaching your peak and does not determine the height you reach.
 author: Dusign
@@ -31,9 +30,6 @@ signature-img: img/signature/Just-do-it-white.png
 
 
 # SNS settings
-# RSS: false
-# weibo_username:     Demonbaneen
-# zhihu_username:     Demonbane
 github_username:    dusign
 twitter_username:   dusignr
 facebook_username:  Gang Du
@@ -44,12 +40,7 @@ anchorjs: true                          # if you want to customize anchor. check
 
 
 # Disqus settings
-disqus_username: your-disqus-ID
-
-# Duoshuo settings
-# duoshuo_username: dusign
-# Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+disqus_username: 
 
 
 # Analytics settings
