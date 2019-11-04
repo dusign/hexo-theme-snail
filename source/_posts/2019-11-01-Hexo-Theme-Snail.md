@@ -3,7 +3,7 @@ title: Hexo-Theme-Snail
 catalog: true
 comments: true
 date: 2019-11-01 22:02:12
-subtitle: 
+subtitle: A succinct hexo theme.
 header-img: snail-bg.jpg
 tags:
 - dusign
@@ -17,7 +17,9 @@ catagories:
 - hexo
 ---
 # hexo-theme-snail
-[View Live Super Snail Blog →](https://www.dusign.net)
+[View Hexo-Theme-Snail Sources On Github &#10174; ](https://github.com/dusign/hexo-theme-snail)
+
+![hexo-theme-snail](snail.png)
 
 Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, that can be set according to your own preferences in the settings, and also has the functions of sharing and commenting. More features are under development.
 
@@ -29,15 +31,15 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
 - picture sharing (under development)
 
 ## Quick Start
-#### Install Hexo
+### Install Hexo
 ```bash
 $ npm install hexo-cli -g
 ```
-#### Setup your blog
+### Setup your blog
 ```bash
 $ hexo init blog
 ```
-#### Installation Theme
+### Installation Theme
 ```bash
 $ cd blog
 $ rm -rf source
@@ -47,7 +49,7 @@ $ mv ./hexo-theme-snail/snail ./themes
 $ mv ./hexo-theme-snail/* ./
 $ npm install
 ```
-#### Set Theme
+### Set Theme
 Modify the value of `theme:` in `_config.yml`
 ```yml
 # Extensions
@@ -55,14 +57,14 @@ Modify the value of `theme:` in `_config.yml`
 ## Themes: https://hexo.io/themes/
 theme: snail
 ```
-#### Start the Server
+### Start the Server
 ```bash
 $ hexo generate
 $ hexo server
 ```
 
 ## Configuration
-#### Site
+### Site
 Replace the following information with your own.
 ```yml
 # Site
@@ -73,7 +75,7 @@ author: Dusign
 language: en
 timezone:
 ```
-#### Site Settings
+### Site Settings
 Put customized pictures in `img` directory.
 ```yml
 # Site settings
@@ -85,7 +87,7 @@ header-img: img/header_img/home-bg-1-dark.jpg
 signature: true #show signature
 signature-img: img/signature/Just-do-it-white.png
 ```
-#### SNS Settings
+### SNS Settings
 If you don't want to display it, you can delete it directly.
 ```yml
 # SNS settings
@@ -94,7 +96,7 @@ twitter_username:   dusignr
 facebook_username:  Gang Du
 zhihu_username: dusignr
 ```
-#### Sidebar Settings
+### Sidebar Settings
 ```yml
 # Sidebar Settings
 sidebar: true                      # whether or not using Sidebar.
@@ -136,14 +138,14 @@ friends: [
     }
 ]
 ```
-#### Theme
+### Theme
 ```yml
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: snail
 ```
-#### Deployment
+### Deployment
 ```yml
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -154,7 +156,7 @@ deploy:
       coding: coding.repository.address
   branch: master
 ```
-#### Comment
+### Comment
 See httpymls://github.com/imsun/gitment for detailed configuration method.
 ```yml
 # Comment
@@ -167,7 +169,7 @@ comment:
   client_id:
   client_secret:
 ```
-#### Tip
+### Tip
 ```yml
 # Tip
 tip:
@@ -177,7 +179,7 @@ tip:
           评论点赞需要github账号登录，如果没有账号的话请点击 
           <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
 ```
-#### Color Sheme
+### Color Sheme
 Set the `enable` value of the desired color sheme to `true`. If the value of `bg_effects.star.enable` is `true`, please modify the value of `highlight_theme` in `./themes/snail/_config.yml` to `night`.
 ```yml
 # Color Sheme

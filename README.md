@@ -1,6 +1,8 @@
 # hexo-theme-snail
 [View Live Super Snail Blog →](https://www.dusign.net)
 
+![hexo-theme-snail](./img/snail.png)
+
 Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, that can be set according to your own preferences in the settings, and also has the functions of sharing and commenting. More features are under development.
 
 ## Features
