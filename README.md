@@ -3,7 +3,8 @@
 
 <div align=center>
 <img src='./img/snail.png'/>
-</div>
+</div><br/>
+
 
 
 Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, that can be set according to your own preferences in the settings, and also has the functions of sharing and commenting. More features are under development.
