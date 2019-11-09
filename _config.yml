@@ -63,6 +63,13 @@ widgets:
 - archive
 - category
 
+## Search
+search:
+  enable: true
+  path: search.xml
+  field: post
+  content: true
+
 # widget behavior
 ## Archive
 archive_type: 'monthly'

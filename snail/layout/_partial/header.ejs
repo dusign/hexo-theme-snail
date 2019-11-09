@@ -39,15 +39,29 @@
                             Posted by <%- page.author || config.author %> on
                             <%= page.date.format(config.date_format) %>
                         </span>
+
+                        <% if(config['visitor']['enable']) { %>
+                            <div class="blank_box"></div>
+                            <span class="meta">
+                                Words <span class="post-count"><%= wordcount(page.content) %></span> and
+                                Reading Time <span class="post-count"><%= min2read(page.content) %></span> Minutes
+                            </span>
+                            <div class="blank_box"></div>
+                            <!-- 不蒜子统计 start -->
+                            <span class="meta">
+                                Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+                            </span>
+                            <!-- 不蒜子统计 end -->
+                        <% } %>
+
                     </div>
                 <% } else { %>
                     <div class="site-heading">
                         <h1><%= page.title || config.title %></h1>
                         <!--<hr class="small">-->
-                        <span class="subheading"><%= page.description || config.subtitle || "" %></span>
+                        <span id="subdusi" class="subheading"><%= page.description || config.subtitle || "" %></span>
                     </div>
                 <% } %>
-
 
                 </div>
             </div>

@@ -110,6 +110,8 @@
 <!-- Custom Theme JavaScript -->
 <%- js('js/hux-blog.min.js') %>
 
+<!-- Search -->
+<%- js('js/search.js') %>
 
 <!-- async load function -->
 <script>
@@ -122,24 +124,6 @@
       s.parentNode.insertBefore(o, s);
     }
 </script>
-
-<!-- 
-     Because of the native support for backtick-style fenced code blocks 
-     right within the Markdown is landed in Github Pages, 
-     From V1.6, There is no need for Highlight.js, 
-     so Huxblog drops it officially.
-
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
--->
-<!--
-    <script>
-        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
-            hljs.initHighlightingOnLoad();
-        })
-    </script>
-    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
--->
 
 
 <!-- jquery.tagcloud.js -->
@@ -202,5 +186,20 @@
     })();
 </script>
 <% } %>
+
+<!-- Search -->
+<% if (config['search']['enable']) { %>
+    <script type="text/javascript">      
+        var search_path = "<%= config.search.path %>";
+        if (search_path.length == 0) {
+            search_path = "search.xml";
+        }
+    var path = "<%= config.root %>" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+<% } %>
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 

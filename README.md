@@ -5,7 +5,6 @@
 <img src='./img/snail.png'/>
 </div>
 
-
 Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, that can be set according to your own preferences in the settings, and also has the functions of sharing and commenting. More features are under development.
 
 ## Features
@@ -16,15 +15,15 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
 - picture sharing (under development)
 
 ## Quick Start
-#### Install Hexo
+### Install Hexo
 ```bash
 $ npm install hexo-cli -g
 ```
-#### Setup your blog
+### Setup your blog
 ```bash
 $ hexo init blog
 ```
-#### Installation Theme
+### Installation Theme
 ```bash
 $ cd blog
 $ rm -rf source
@@ -34,7 +33,14 @@ $ mv ./hexo-theme-snail/snail ./themes
 $ mv ./hexo-theme-snail/* ./
 $ npm install
 ```
-#### Set Theme
+### Install Mathjax
+To install Mathjax, please click https://www.dusign.net/2019/10/14/Hexo-Configuration/ for a detailed tutorial.
+### Install WordCount
+```
+npm install hexo-wordcount --save
+```
+See https://github.com/willin/hexo-wordcount for detailed configuration method.
+### Set Theme
 Modify the value of `theme:` in `_config.yml`
 ```yml
 # Extensions
@@ -42,14 +48,14 @@ Modify the value of `theme:` in `_config.yml`
 ## Themes: https://hexo.io/themes/
 theme: snail
 ```
-#### Start the Server
+### Start the Server
 ```bash
 $ hexo generate
 $ hexo server
 ```
 
 ## Configuration
-#### Site
+### Site
 Replace the following information with your own.
 ```yml
 # Site
@@ -60,7 +66,7 @@ author: Dusign
 language: en
 timezone:
 ```
-#### Site Settings
+### Site Settings
 Put customized pictures in `img` directory.
 ```yml
 # Site settings
@@ -72,7 +78,7 @@ header-img: img/header_img/home-bg-1-dark.jpg
 signature: true #show signature
 signature-img: img/signature/Just-do-it-white.png
 ```
-#### SNS Settings
+### SNS Settings
 If you don't want to display it, you can delete it directly.
 ```yml
 # SNS settings
@@ -81,7 +87,7 @@ twitter_username:   dusignr
 facebook_username:  Gang Du
 zhihu_username: dusignr
 ```
-#### Sidebar Settings
+### Sidebar Settings
 ```yml
 # Sidebar Settings
 sidebar: true                      # whether or not using Sidebar.
@@ -123,14 +129,14 @@ friends: [
     }
 ]
 ```
-#### Theme
+### Theme
 ```yml
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: snail
 ```
-#### Deployment
+### Deployment
 ```yml
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -141,8 +147,8 @@ deploy:
       coding: coding.repository.address
   branch: master
 ```
-#### Comment
-See httpymls://github.com/imsun/gitment for detailed configuration method.
+### Comment
+See https://github.com/imsun/gitment for detailed configuration method.
 ```yml
 # Comment
 ## This comment system is gitment
@@ -154,7 +160,7 @@ comment:
   client_id:
   client_secret:
 ```
-#### Tip
+### Tip
 ```yml
 # Tip
 tip:
@@ -164,7 +170,7 @@ tip:
           评论点赞需要github账号登录，如果没有账号的话请点击 
           <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
 ```
-#### Color Sheme
+### Color Sheme
 Set the `enable` value of the desired color sheme to `true`. If the value of `bg_effects.star.enable` is `true`, please modify the value of `highlight_theme` in `./themes/snail/_config.yml` to `night`.
 ```yml
 # Color Sheme
@@ -198,15 +204,54 @@ bg_effects:
   star:
     enable: true
 ```
+### Visitor statistics
+```yml
+# Visitor statistics
+visitor:
+  enable: true
+  type: 
+```
+### Search
+run `$ npm install hexo-generator-search --save`
+then add the follow configure to `_config.yml`
+```yml
+## Search
+search:
+  enable: true
+  path: search.xml
+  field: post
+  content: true
+```
+- path - file path. By default is search.xml . If the file extension is .json, the output format will be JSON. Otherwise XML format file will be exported.
+- field - the search scope you want to search, you can chose:
+  - post (Default) - will only covers all the posts of your blog.
+  - page - will only covers all the pages of your blog.
+  - all - will covers all the posts and pages of your blog.
+- content - whether contains the whole content of each article. If false, the generated results only cover title and other meta info without mainbody. By default is true.
+### Error and Solutions
+- run `hexo deploy` with "ERROR Deployer not found: git"
+solution: `npm install --save hexo-deployer-git`
 
 ## Releases
+V1.2
+- fix the bug
+- add search within site
+
+V1.1
+- change title font
+- add wordcount
+- add visitor statistics
+- fix the bug (categories not display)
+- replacing mathjax with marked
+
 V1.0
 - fix the bugs
 - add comment system
 - add notice tips
 - add star sheme
+- add line sheme (background effect)
+- add mouse-click effect
 
 ## License
-Apache License 2.0 Copyright(c) 2018-2020 [Dusign](https://github.com/dusign)   
-
-[hexo-theme-snail](https://github.com/dusign/hexo-theme-snail) is derived from [hexo-theme-beantech](https://github.com/YenYuHsuan/hexo-theme-beantech) ，thanks [YenYuHsuan](https://github.com/YenYuHsuan)。
+Apache License 2.0 Copyright(c) 2018-2020 [dusign](https://github.com/dusign)   
+[hexo-theme-snail](https://github.com/dusign/hexo-theme-snail) is derived from [hexo-theme-beantech](https://github.com/YenYuHsuan/hexo-theme-beantech) ，thanks [YenYuHsuan](https://github.com/YenYuHsuan).
