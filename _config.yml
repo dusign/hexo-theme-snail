@@ -175,6 +175,9 @@ theme: snail
 #sitemap
 sitemap:
   path: sitemap.xml
+## Baidusitemap
+baidusitemap:
+path: baidusitemap.xml
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
