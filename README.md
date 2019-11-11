@@ -1,9 +1,7 @@
 # hexo-theme-snail
 [View Live Super Snail Blog →](https://www.dusign.net)
 
-<div align=center>
-<img src='./img/snail.png'/>
-</div><br/>
+![hexo-theme-snail](./img/snail-light.png)
 
 Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, that can be set according to your own preferences in the settings, and also has the functions of sharing and commenting. More features are under development.
 
@@ -11,7 +9,7 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
 - light color theme and star theme
 - diversified comment system
 - notice tips
-- share to other platforms (under development)
+- sharing to other platforms (under development)
 - picture sharing (under development)
 
 ## Quick Start
@@ -232,13 +230,22 @@ search:
 - run `hexo deploy` with "ERROR Deployer not found: git"
 solution: `npm install --save hexo-deployer-git`
 
+### Top
+Hexo-theme-snail has added the article top function, just add the following content in the article head.
+```
+top: true
+```
+
 ## Releases
 V1.2
 - fix the bug
 - add search within site
+- top
+- image wave effect
+- sharing
 
 V1.1
-- change title font
+- change title font-family
 - add wordcount
 - add visitor statistics
 - fix the bug (categories not display)

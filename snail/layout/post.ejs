@@ -52,15 +52,61 @@ layout: layout
                 <% } %>
                 <!-- tip end -->
 
+                <!--分享-->
+                <% if(config['share']) { %>
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                <% } %>
+                <!--分享-->
+
+                <!-- require APlayer start --><!--
+                <% if(config['metingjs']['enable']) { %>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+                <div class="aplayer"
+                    data-id="<%= config['data-id'] %>"
+                    data-server="<%= config['data-server'] %>"
+                    data-type="<%= config['data-type'] %>"
+                    data-fixed="<%= config['data-fixed'] %>" >
+                </div>
+                <% } %>-->
+                <!-- require APlayer end -->
+
                 <!-- gitment start -->
-                <% if(config['comment']['enable']){ %>
+                <% if(config['comment']['gitment']['enable']){ %>
                 <hr>
                 <%- partial('_partial/comment') %>
                 <% } %>
                 <!-- gitment end -->
 
+                <!-- 来必力City版安装代码 -->
+                <% if(config['comment']['livere']['enable']){ %>
+                <hr>
+                <div id="lv-container" data-id="city" data-uid="MTAyMC80NzQ3MS8yMzk3MQ==">
+                    <script type="text/javascript">
+                   (function(d, s) {
+                       var j, e = d.getElementsByTagName(s)[0];
+
+                       if (typeof LivereTower === 'function') { return; }
+
+                       j = d.createElement(s);
+                       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                       j.async = true;
+
+                       e.parentNode.insertBefore(j, e);
+                   })(document, 'script');
+                    </script>
+                <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <% } %>
+                <!-- City版安装代码已完成 -->
+
                 <!-- disqus comment start -->
-                <% if(config['disqus_username']) { %>
+                <% if(config['comment']['disqus']['enable']) { %>
                     <div class="comment">
                         <div id="disqus_thread" class="disqus-thread"></div>
                     </div>
@@ -106,11 +152,11 @@ layout: layout
     </div>
 </article>
 
-<% if(config['disqus_username']) { %>
+<% if(config['comment']['disqus']['enable']) { %>
 <!-- disqus embedded js code start (one page only need to embed once) -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "<%= config['disqus_username'] %>";
+    var disqus_shortname = "<%= config['comment']['disqus']['username'] %>";
     var disqus_identifier = "<%= page.permalink %>";
     var disqus_url = "<%= page.permalink %>";
 

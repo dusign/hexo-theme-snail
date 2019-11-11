@@ -28,7 +28,6 @@ header-img: img/header_img/home-bg-1-dark.jpg
 signature: true #show signature
 signature-img: img/signature/Just-do-it-white.png
 
-
 # SNS settings
 github_username:    dusign
 twitter_username:   dusignr
@@ -38,10 +37,8 @@ zhihu_username: dusignr
 # Build settings
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
-
 # Disqus settings
 disqus_username: 
-
 
 # Analytics settings
 # Baidu Analytics
@@ -49,7 +46,6 @@ disqus_username:
 # Google Analytics
 ga_track_id: 'UA-XXXXXXXX-X'          # Format: UA-xxxxxx-xx
 ga_domain: yoursite
-
 
 # Sidebar settings
 sidebar: true                      # whether or not using Sidebar.
@@ -103,8 +99,6 @@ math:
   engine: mathjax
 
 #Custom Setting End
-
-
 
 # Directory
 source_dir: source
@@ -192,19 +186,29 @@ deploy:
 ## This comment system is gitment
 ## gitment url: https://github.com/imsun/gitment
 comment:
+gitment:
   enable: false
   owner:
   repo:
   client_id:
   client_secret:
+livere:
+  enable: false
+disqus:
+  enable: false
+  username:
+  
+## music
+metingjs:
+  enable: true
 
 # Tip
 tip:
   enable: true
-  content: 欢迎访问 <a href="https://www.dusign.net" target="dusign">dusign</a> 的博客，博客系统一键分享的功能还在完善中，请大家耐心等待。
-          若有问题或者有好的建议欢迎留言，笔者看到之后会及时回复。
-          评论点赞需要github账号登录，如果没有账号的话请点击 
-          <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
+  content: 欢迎访问 <a href="https://www.dusign.net" target="dusign">dusign</a> 的博客,
+        若有问题或者有好的建议欢迎留言，笔者看到之后会及时回复。
+        评论点赞需要github账号登录，如果没有账号的话请点击
+        <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
 
 # Background effects
 ## If there is no effect after modification, please empty the cache and try again.
@@ -237,3 +241,7 @@ bg_effects:
   star:
     enable: true
 
+# Visitor statistics
+visitor:
+  enable: true
+  type: 

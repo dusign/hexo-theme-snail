@@ -1,41 +1,86 @@
 ---
 layout: page
 ---
-<!-- Main Content -->
-
+<!-- Top -->
 <% page.posts.each(function(post){ %>
-<div class="post-preview">
+    <% if (post.top) { %>
 
-    <a href="<%- config.root %><%- post.path %>">
-        <h2 class="post-title">
-            <%- post.title || "Untitled" %>
-        </h2>
-        <h3 class="post-subtitle">
-            <%- post.subtitle || "" %>
-        </h3>
-        <div class="post-content-preview">
-            <%- truncate(strip_html(post.content), {length: 200, omission: '...'}) %>...
-        </div>
-    </a>
-    <% if (config.home_posts_tag){%>
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by <%- post.author || config.author %> on
-            <%= post.date.format(config.date_format) %>
-        </p>
-        <div class="tags">
-            <% post.tags.forEach(function(tag){ %>
-              <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
-            <% }) %>
-        </div>
-    <%} else {%>
-        <p class="post-meta">
-            Posted by <%- post.author || config.author %> on
-            <%= post.date.format(config.date_format) %>
-        </p>
-    <%}%>
+        <div class="post-preview">
 
-</div>
-<hr>
+            <a href="<%- config.root %><%- post.path %>">
+                <h2 class="post-title">
+                    <img class="top_logo" src="/img/tp.png"/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<%- post.title || "Untitled" %>
+                </h2>
+                <h3 class="post-subtitle">
+                    <%- post.subtitle || "" %>
+                </h3>
+                <div class="post-content-preview">
+                    <%- truncate(strip_html(post.content), {length: 200, omission: '...'}) %>...
+                </div>
+            </a>
+            <% if (config.home_posts_tag){%>
+                <p class="post-meta" style="margin: 10px 0;">
+                    Posted by <%- post.author || config.author %> on
+                    <%= post.date.format(config.date_format) %>
+                </p>
+                <div class="tags">
+                    <% post.tags.forEach(function(tag){ %>
+                      <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+                    <% }) %>
+                </div>
+            <%} else {%>
+                <p class="post-meta">
+                    Posted by <%- post.author || config.author %> on
+                    <%= post.date.format(config.date_format) %>
+                </p>
+            <%}%>
+
+        </div>
+        <hr>
+
+    <% } %>
+<% }); %>
+
+
+<!-- Main Content -->
+<% page.posts.each(function(post){ %>
+    <% if (!post.top) { %>
+
+        <div class="post-preview">
+
+            <a href="<%- config.root %><%- post.path %>">
+                <h2 class="post-title">
+                    <%- post.title || "Untitled" %>
+                </h2>
+                <h3 class="post-subtitle">
+                    <%- post.subtitle || "" %>
+                </h3>
+                <div class="post-content-preview">
+                    <%- truncate(strip_html(post.content), {length: 200, omission: '...'}) %>...
+                </div>
+            </a>
+            <% if (config.home_posts_tag){%>
+                <p class="post-meta" style="margin: 10px 0;">
+                    Posted by <%- post.author || config.author %> on
+                    <%= post.date.format(config.date_format) %>
+                </p>
+                <div class="tags">
+                    <% post.tags.forEach(function(tag){ %>
+                      <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+                    <% }) %>
+                </div>
+            <%} else {%>
+                <p class="post-meta">
+                    Posted by <%- post.author || config.author %> on
+                    <%= post.date.format(config.date_format) %>
+                </p>
+            <%}%>
+
+        </div>
+        <hr>
+
+    <% } %>
 <% }); %>
 
 
