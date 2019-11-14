@@ -1,7 +1,14 @@
 # hexo-theme-snail
 [View Live Super Snail Blog →](https://www.dusign.net)
 
+**Light theme preview**
 ![hexo-theme-snail](./img/snail-light.png)
+
+**Dark theme preview**
+![hexo-theme-snail](./img/snail-dark.png)
+
+**Star theme preview**
+![hexo-theme-snail](./img/snail-star.png)
 
 Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, that can be set according to your own preferences in the settings, and also has the functions of sharing and commenting. More features are under development.
 
@@ -163,7 +170,7 @@ comment:
 # Tip
 tip:
   enable: true
-  content: 欢迎访问 <a href="https://www.dusign.net" target="dusign">dusign</a> 的博客，博客系统一键分享的功能还在完善中，请大家耐心等待。
+  content: 欢迎访问 <a href="https://www.dusign.net" target="dusign">dusign</a> 的博客,
           若有问题或者有好的建议欢迎留言，笔者看到之后会及时回复。
           评论点赞需要github账号登录，如果没有账号的话请点击 
           <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
@@ -171,7 +178,7 @@ tip:
 ### Color Sheme
 Set the `enable` value of the desired color sheme to `true`. If the value of `bg_effects.star.enable` is `true`, please modify the value of `highlight_theme` in `./themes/snail/_config.yml` to `night`.
 ```yml
-# Color Sheme
+# Background effects
 ## If there is no effect after modification, please empty the cache and try again.
 ## ⚠️ The following special effects will take up a lot of cpu resorces, please open it carefully.
 bg_effects:
@@ -199,7 +206,7 @@ bg_effects:
           ,"rgb(119,195,79)"
           ,"rgb(4,77,34)"
           ,"rgb(122,2,60)"'
-  star:
+  wave:
     enable: true
 ```
 ### Visitor statistics
@@ -232,8 +239,14 @@ solution: `npm install --save hexo-deployer-git`
 
 ### Top
 Hexo-theme-snail has added the article top function, just add the following content in the article head.
-```
+```yml
 top: true
+```
+### Color Theme
+```
+## Color Theme
+### light , dark or star
+color_theme: light
 ```
 
 ## Releases
@@ -243,6 +256,7 @@ V1.2
 - top
 - image wave effect
 - sharing
+- add dark theme
 
 V1.1
 - change title font-family
@@ -255,8 +269,8 @@ V1.0
 - fix the bugs
 - add comment system
 - add notice tips
-- add star sheme
-- add line sheme (background effect)
+- add star theme
+- add line theme (background effect)
 - add mouse-click effect
 
 ## License
