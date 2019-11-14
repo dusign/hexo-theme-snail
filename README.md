@@ -2,12 +2,15 @@
 [View Live Super Snail Blog →](https://www.dusign.net)
 
 **Light theme preview**
+
 ![hexo-theme-snail](./img/snail-light.png)
 
 **Dark theme preview**
+
 ![hexo-theme-snail](./img/snail-dark.png)
 
 **Star theme preview**
+
 ![hexo-theme-snail](./img/snail-star.png)
 
 Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, that can be set according to your own preferences in the settings, and also has the functions of sharing and commenting. More features are under development.
@@ -24,10 +27,12 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
 ```bash
 $ npm install hexo-cli -g
 ```
+
 ### Setup your blog
 ```bash
 $ hexo init blog
 ```
+
 ### Installation Theme
 ```bash
 $ cd blog
@@ -38,13 +43,16 @@ $ mv ./hexo-theme-snail/snail ./themes
 $ mv ./hexo-theme-snail/* ./
 $ npm install
 ```
+
 ### Install Mathjax
 To install Mathjax, please click https://www.dusign.net/2019/10/14/Hexo-Configuration/ for a detailed tutorial.
+
 ### Install WordCount
 ```
 npm install hexo-wordcount --save
 ```
 See https://github.com/willin/hexo-wordcount for detailed configuration method.
+
 ### Set Theme
 Modify the value of `theme:` in `_config.yml`
 ```yml
@@ -53,6 +61,7 @@ Modify the value of `theme:` in `_config.yml`
 ## Themes: https://hexo.io/themes/
 theme: snail
 ```
+
 ### Start the Server
 ```bash
 $ hexo generate
@@ -71,6 +80,7 @@ author: Dusign
 language: en
 timezone:
 ```
+
 ### Site Settings
 Put customized pictures in `img` directory.
 ```yml
@@ -83,6 +93,7 @@ header-img: img/header_img/home-bg-1-dark.jpg
 signature: true #show signature
 signature-img: img/signature/Just-do-it-white.png
 ```
+
 ### SNS Settings
 If you don't want to display it, you can delete it directly.
 ```yml
@@ -92,6 +103,7 @@ twitter_username:   dusignr
 facebook_username:  Gang Du
 zhihu_username: dusignr
 ```
+
 ### Sidebar Settings
 ```yml
 # Sidebar Settings
@@ -134,6 +146,7 @@ friends: [
     }
 ]
 ```
+
 ### Theme
 ```yml
 # Extensions
@@ -141,6 +154,7 @@ friends: [
 ## Themes: https://hexo.io/themes/
 theme: snail
 ```
+
 ### Deployment
 ```yml
 # Deployment
@@ -152,6 +166,7 @@ deploy:
       coding: coding.repository.address
   branch: master
 ```
+
 ### Comment
 See https://github.com/imsun/gitment for detailed configuration method.
 ```yml
@@ -165,6 +180,7 @@ comment:
   client_id:
   client_secret:
 ```
+
 ### Tip
 ```yml
 # Tip
@@ -175,6 +191,7 @@ tip:
           评论点赞需要github账号登录，如果没有账号的话请点击 
           <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
 ```
+
 ### Color Sheme
 Set the `enable` value of the desired color sheme to `true`. If the value of `bg_effects.star.enable` is `true`, please modify the value of `highlight_theme` in `./themes/snail/_config.yml` to `night`.
 ```yml
@@ -209,6 +226,7 @@ bg_effects:
   wave:
     enable: true
 ```
+
 ### Visitor statistics
 ```yml
 # Visitor statistics
@@ -216,6 +234,7 @@ visitor:
   enable: true
   type: 
 ```
+
 ### Search
 run `$ npm install hexo-generator-search --save`
 then add the follow configure to `_config.yml`
@@ -233,6 +252,7 @@ search:
   - page - will only covers all the pages of your blog.
   - all - will covers all the posts and pages of your blog.
 - content - whether contains the whole content of each article. If false, the generated results only cover title and other meta info without mainbody. By default is true.
+
 ### Error and Solutions
 - run `hexo deploy` with "ERROR Deployer not found: git"
 solution: `npm install --save hexo-deployer-git`
@@ -242,6 +262,7 @@ Hexo-theme-snail has added the article top function, just add the following cont
 ```yml
 top: true
 ```
+
 ### Color Theme
 ```
 ## Color Theme
