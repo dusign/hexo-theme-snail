@@ -37,9 +37,6 @@ zhihu_username: dusignr
 # Build settings
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
-# Disqus settings
-disqus_username: 
-
 # Analytics settings
 # Baidu Analytics
 # ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
@@ -186,21 +183,17 @@ deploy:
 ## This comment system is gitment
 ## gitment url: https://github.com/imsun/gitment
 comment:
-gitment:
-  enable: false
-  owner:
-  repo:
-  client_id:
-  client_secret:
-livere:
-  enable: false
-disqus:
-  enable: false
-  username:
-  
-## music
-metingjs:
-  enable: true
+  gitment:
+    enable: false
+    owner:
+    repo:
+    client_id:
+    client_secret:
+  livere:
+    enable: false
+  disqus:
+    enable: false
+    username:
 
 # Tip
 tip:
