@@ -24,12 +24,23 @@
     <%- css('css/bootstrap.min.css') %>
 
     <!-- Custom CSS --> 
-    <% if(config['bg_effects']['enable'] && config['bg_effects']['star']['enable']){ %>
-      <!-- background effects start -->
-      <%- css('css/dusign-star.css')%>
+    <% if(config['color_theme'] == 'star'){ %>
+        <!-- background effects start -->
+        <%- css('css/dusign-dark.css')%>
+        <%- css('css/dusign-common-dark.css') %>
+        <%- css('css/font-awesome.star.css')%>
+        <%- css('css/toc')%>
+    <% }else if(config['color_theme'] == 'dark'){ %>
+        <%- css('css/dusign-dark.css')%>
+        <%- css('css/dusign-common-dark.css') %>
+        <%- css('css/font-awesome.css')%>
+        <%- css('css/toc')%>
     <% }else{ %>
-      <%- css('css/dusign-light.css')%>
-      <!-- background effects end -->
+        <%- css('css/dusign-light.css')%>
+        <%- css('css/dusign-common-light.css') %>
+        <%- css('css/font-awesome.css')%>
+        <%- css('css/toc')%>
+        <!-- background effects end -->
     <% } %>
     
     <!-- Pygments Highlight CSS -->
@@ -41,40 +52,9 @@
 
     <%- css('css/signature')%>
 
-    <% if(config['bg_effects']['enable'] && config['bg_effects']['star']['enable']){ %>
-      <%- css('css/toc-star')%>
-    <% }else{ %>
-      <%- css('css/toc')%>
-    <% } %>
-
-    <%- css('css/dusign-common.css') %>
     <%- css('css/fonts.googleapis.css') %>
 
-    <!-- Custom Fonts -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <!-- Hux change font-awesome CDN to qiniu -->
-    <!--<link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <% if(config['bg_effects']['enable'] && config['bg_effects']['star']['enable']){ %>
-      <%- css('css/font-awesome.star.css')%>
-    <% }else{ %>
-      <%- css('css/font-awesome.css')%>
-    <% } %>
-
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <!-- Hux Delete, sad but pending in China
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
-    css'>
-    -->
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
     <!-- ga & ba script hoook -->
     <script></script>

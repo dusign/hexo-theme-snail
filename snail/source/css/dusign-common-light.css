@@ -1,3 +1,44 @@
+/* 滚动条背景与宽度 */
+::-webkit-scrollbar {
+	width: 6px;
+	background: none;
+	height: 6px;
+}
+/* 滚动条轨道样式 */
+::-webkit-scrollbar-track {
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.2) inset;
+	-webkit-box-shadow: 0px 0px 0px rgba(0,0,0,0.2) inset;
+	border-radius: 0px;
+	background: white;
+	border: 0px solid transparent;
+}
+/* 滚动条滑块样式 */
+::-webkit-scrollbar-thumb {
+	width: 20px;
+	min-height: 1px;
+	box-shadow: 0 0 0 0px #464f70 inset;
+	border-radius: 3px;
+	background-color: rgba(157, 165, 183, 0.4);
+	background-clip: padding-box;
+	border: 0px solid transparent;
+}
+/* 当前窗口未激活的情况下 */  
+::-webkit-scrollbar-thumb:window-inactive {  
+    background: rgba(157, 165, 183, 0.4);
+}
+/* hover到滚动条上 */  
+::-webkit-scrollbar-thumb:vertical:hover{  
+    background: rgba(157, 165, 183, 0.7);
+}
+/* 滚动条按下 */  
+::-webkit-scrollbar-thumb:vertical:active{  
+    background: rgba(157, 165, 183, 0.7);
+}
+/* 滚动条边角样式 */
+::-webkit-scrollbar-corner {
+	background: white;
+}
+
 .blank_box{
   width: 100%;
   height: 10px;
@@ -15,6 +56,7 @@
 #local-search-input{
 	box-shadow:0px 0px 0px 0px rgb(191,191,191) inset;
 	border:1px solid rgb(191,191,191);
+	background: none;
 }
 #local-search-input:focus{
 	border:1px solid #66afe9;
@@ -91,14 +133,16 @@
 #blog_comments textarea{
 	resize:none!important;
 	font-size:13px!important;
+	background:none!important;
 }
 .gitment_container{}
 .gitment-header-issue-link{
 	display:none!important;
 }
-.gitment-editor-submit{
-}
 .hello_visitor{}
+.gitment-comment-header{
+	background:none!important;
+}
 .gitment-comment-main{
 	border:1px solid rgb(191,191,191);
 }
@@ -113,6 +157,7 @@
 .gitment-comment-main:hover::before{
 	border-width:8px;
 	border-right-color:rgba(102,175,233,0.6);
+	background:none;
 }
 .gitment-comment-header{
 }
@@ -160,10 +205,11 @@
 	    z-index: 5;
 	}
 	.wave{
+		border:0px;
 		position: absolute;
 		margin: 0px;
 		padding: 0px;
-		width: calc(100% + 0.26px);
+		width: calc(100% + 0.5px);
 		height: 100%;
 		background-repeat: repeat no-repeat;
 	    background-position: 0px bottom;
@@ -220,12 +266,13 @@
 	    padding: 0px;
 	    background-color: transparent;
 	    z-index: 5;
+	    display: none;
 	}
 	.wave{
 		position: absolute;
 		margin: 0px;
 		padding: 0px;
-		width: calc(200% + 0.26px);
+		width: calc(200% + 0.5px);
 		height: 100%;
 		background-repeat: repeat no-repeat;
 	    background-position: 0px bottom;
@@ -247,6 +294,58 @@
 		/*-webkit-animation-delay:10s;*/
 	}
 }
+
+/* Tips */
+.notice {
+    color: rgba(51,51,51,0.9);
+    margin: 14px 10px 10px 10px;
+    padding: 0px;
+	line-height: 24px!important;
+	font-size: 14px;
+}
+.comment_notes_blank {
+    height: 100px;
+}
+
+.comment_notes {
+    color: rgba(51,51,51,0.9);
+    text-align: left;
+    font-style: italic;
+}
+
+.visitor_notice {
+    border: 1px solid rgba(209,216,220,0.9);
+    padding: 0px 0px 0px 0px!important;
+    border-radius: 10px;
+    min-height: 50px;
+}
+
+.visitor_notice img{
+    height: 40px;
+    width: 40px;
+    float: left;
+    position: relative;
+    margin: 5px 10px 5px 10px!important;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+}
+.visitor_notice a {
+    text-decoration: none;
+    color: rgba(51,51,51,0.9);
+    font-weight: normal;
+    font-style: italic;
+}
+.visitor_notice a:hover {
+    text-decoration: none;
+    color: rgba(51,51,51,0.9);
+    font-weight: bolder;
+    font-style: italic;
+}
+
+
+
+
 
 
 

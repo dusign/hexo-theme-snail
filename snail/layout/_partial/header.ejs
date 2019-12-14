@@ -2,16 +2,40 @@
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
-        <% if (is_home()) { %>
-            background-image: url('<%= config.root + config["header-img"] %>') 
-            /*config*/
-        <%} else if (is_post()){%>
-            background-image: url('<%= page["header-img"] %>')
-            /*post*/
-        <%} else {%>
-            background-image: url('<%= config.root + page["header-img"] %>')
-            /*page*/
-        <%} %>
+        <% if(config['color_theme'] == 'star'){ %>
+            <% if (is_home()) { %>
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('<%= config.root + config["header-img"] %>') 
+                /*config*/
+            <%} else if (is_post()){%>
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('<%= page["header-img"] %>')
+                /*post*/
+            <%} else {%>
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('<%= config.root + page["header-img"] %>')
+                /*page*/
+            <%} %>
+        <% }else if(config['color_theme'] == 'dark'){ %>
+            <% if (is_home()) { %>
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('<%= config.root + config["header-img"] %>') 
+                /*config*/
+            <%} else if (is_post()){%>
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('<%= page["header-img"] %>')
+                /*post*/
+            <%} else {%>
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('<%= config.root + page["header-img"] %>')
+                /*page*/
+            <%} %>
+        <% }else{ %>
+            <% if (is_home()) { %>
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= config.root + config["header-img"] %>') 
+                /*config*/
+            <%} else if (is_post()){%>
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= page["header-img"] %>')
+                /*post*/
+            <%} else {%>
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= config.root + page["header-img"] %>')
+                /*page*/
+            <%} %>
+        <% } %>
     }
     <% if (config.signature) {%>
     #signature{
@@ -67,8 +91,11 @@
             </div>
         </div>      
     </div>
+
+    <% if(config['bg_effects']['enable'] && config['bg_effects']['wave']['enable'] && (config['color_theme'] != 'star')){ %>
     <div class="waveWrapper">
-        <div class="wave wave_before" style="background-image: url('/img/wave-top80.png')"></div>
-        <div class="wave wave_after" style="background-image: url('/img/wave-top80.png')"></div>
+        <div class="wave wave_before" style="background-image: url('/img/wave-<%= config.color_theme %>.png')"></div>
+        <div class="wave wave_after" style="background-image: url('/img/wave-<%= config.color_theme %>.png')"></div>
     </div>
+    <% } %>
 </header>

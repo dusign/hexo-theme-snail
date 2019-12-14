@@ -295,7 +295,7 @@ pre code {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 93;
   /* Hux learn from
      *     TypeIsBeautiful,
      *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
@@ -789,11 +789,11 @@ body {
     padding: 55px 0;
   }
 }
-#tag_cloud {
+#tag_clouds {
   margin: 20px 0 15px 0;
 }
-#tag_cloud a,
-#tag_cloud .tag {
+#tag_clouds a,
+#tag_clouds .tag {
   font-size: 14px;
   border: none;
   line-height: 28px;
@@ -801,14 +801,14 @@ body {
   margin-bottom: 8px;
   background: #D6D6D6;
 }
-#tag_cloud a:hover,
-#tag_cloud .tag:hover,
-#tag_cloud a:active,
-#tag_cloud .tag:active {
+#tag_clouds a:hover,
+#tag_clouds .tag:hover,
+#tag_clouds a:active,
+#tag_clouds .tag:active {
   background-color: #0085a1 !important;
 }
 @media only screen and (min-width: 768px) {
-  #tag_cloud {
+  #tag_clouds {
     margin-bottom: 25px;
   }
 }

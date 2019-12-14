@@ -1,0 +1,17 @@
+.music-player * {
+    box-sizing: border-box;
+}
+
+.music-player h1, 
+.music-player h2, 
+.music-player h3,
+.music-player h4, 
+.music-player h5, 
+.music-player h6, 
+.music-player p, 
+.music-player ul, 
+.music-player li {
+    margin: 0; padding: 0;
+}
+
+.music-player li { list-style: none; }

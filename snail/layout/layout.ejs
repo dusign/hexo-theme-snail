@@ -9,7 +9,7 @@
 
     <% if(config['bg_effects']['enable']){ %>
         <!-- background effects start -->
-        <% if(config['bg_effects']['star']['enable']){ %>
+        <% if(config['color_theme'] == 'star'){ %>
             <%- partial('_partial/star.ejs') %>
         <% } %>
         <!-- background effects end -->

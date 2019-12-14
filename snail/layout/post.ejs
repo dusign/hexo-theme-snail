@@ -18,21 +18,20 @@ layout: layout
                 <!-- Pager -->
                 <ul class="pager">
                     <% if (page.prev){ %>
-                        <li class="previous">
-                            <a href="<%- config.root %><%- page.prev.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.prev.title %>">&larr; Previous Post</a>
-                        </li>
+                    <li class="previous">
+                        <a href="<%- config.root %><%- page.prev.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.prev.title %>">&larr; Previous Post</a>
+                    </li>
                     <% } %>
                     <% if (page.next){ %>
-                        <li class="next">
-                            <a href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.next.title %>">Next Post &rarr;</a>
-                        </li>
+                    <li class="next">
+                        <a href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.next.title %>">Next Post &rarr;</a>
+                    </li>
                     <% } %>
                 </ul>
 
-                <div class="comment_notes_blank"></div>
-
                 <!-- tip start -->
-                <% if(config['tip']['enable']){ %>
+                <% if(config['tip']['enable'] && (config['tip']['content'] != '')){ %>
+                <div class="comment_notes_blank"></div>
                 <div class="visitor_notice">
                     <img 
                         src="/img/notice.png" 
@@ -42,39 +41,25 @@ layout: layout
                         <%- config.tip.content %>
                     </p>
                 </div>
+                <% } %>
+
+                <% if(config['tip']['enable'] && (config['tip']['copyright'] != '')){ %>
                 <div class="comment_notes">
                     <p>
-                        If you like this blog or find it useful for you, you are welcome to comment on it. 
-                        You are also welcome to share this blog, so that more people can participate in it.
-                        If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+                        <%- config.tip.copyright %>
                     </p>
                 </div>
                 <% } %>
                 <!-- tip end -->
 
-                <!--分享-->
+                <!-- Sharing -->
                 <% if(config['share']) { %>
-                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
-                    <!--  css & js -->
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                <!--  css & js -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
                 <% } %>
-                <!--分享-->
-
-                <!-- require APlayer start --><!--
-                <% if(config['metingjs']['enable']) { %>
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
-                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
-
-                <div class="aplayer"
-                    data-id="<%= config['data-id'] %>"
-                    data-server="<%= config['data-server'] %>"
-                    data-type="<%= config['data-type'] %>"
-                    data-fixed="<%= config['data-fixed'] %>" >
-                </div>
-                <% } %>-->
-                <!-- require APlayer end -->
+                <!-- Sharing -->
 
                 <!-- gitment start -->
                 <% if(config['comment']['gitment']['enable']){ %>
@@ -107,9 +92,9 @@ layout: layout
 
                 <!-- disqus comment start -->
                 <% if(config['comment']['disqus']['enable']) { %>
-                    <div class="comment">
-                        <div id="disqus_thread" class="disqus-thread"></div>
-                    </div>
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
                 <% } %>
                 <!-- disqus comment end -->
             </div>
@@ -193,51 +178,6 @@ layout: layout
     })
 </script>
 
-<% if(config['bg_effects']['enable'] && config['bg_effects']['star']['enable']){ %>
-    <style  type="text/css">
-        .notice {
-            color:white;
-            margin:0px;
-            padding:0px;
-        }
-
-        .visitor_notice a {
-            text-decoration:none;
-            color:rgba(255,255,255,0.9);
-            font-weight:normal;
-            font-style:italic;
-        }
-
-        .visitor_notice a:hover {
-            text-decoration:none;
-            color:rgba(255,255,255,0.9);
-            font-weight:bolder;
-            font-style:italic;
-        }
-    </style>
-<% }else{ %>
-    <style  type="text/css">
-        .notice {
-            color:rgba(51,51,51,0.9);
-            margin:0px;
-            padding:0px;
-        }
-
-        .visitor_notice a {
-            text-decoration:none;
-            color:rgba(51,51,51,0.9);
-            font-weight:normal;
-            font-style:italic;
-        }
-
-        .visitor_notice a:hover {
-            text-decoration:none;
-            color:rgba(51,51,51,0.9);
-            font-weight:bolder;
-            font-style:italic;
-        }
-    </style>
-<% } %>
 
 <style  type="text/css">
     /* place left on bigger screen */
@@ -248,61 +188,6 @@ layout: layout
             font-size: 1.1em;
             margin-top : -0.1em;
         }
-
-        .comment_notes_blank {
-            height:100px;
-        }
-        
-        .comment_notes {
-            color:rgba(51,51,51,0.9);
-            text-align:left;
-            font-style:italic;
-        }
-
-        .visitor_notice {
-            border:1px solid rgba(209,216,220,0.9);
-            padding:20px 20px 20px 20px;
-            border-radius:10px;
-        }
-
-        .visitor_notice img{
-            height:40px;
-            width:40px;
-            float:left;
-            position:relative;
-            margin:0px 10px 0px 0px;
-            padding:0px;
-            top:0px;
-            left:0px;
-        }
     }
-
-    .comment_notes_blank {
-        height:100px;
-    }
-    
-    .comment_notes {
-        color:rgba(51,51,51,0.9);
-        text-align:left;
-        font-style:italic;
-    }
-
-    .visitor_notice {
-        border:1px solid rgba(209,216,220,0.9);
-        padding:20px 20px 20px 20px;
-        border-radius:10px;
-    }
-
-    .visitor_notice img{
-        height:40px;
-        width:40px;
-        float:left;
-        position:relative;
-        margin:0px 10px 0px 0px;
-        padding:0px;
-        top:0px;
-        left:0px;
-    }
-
 </style>
 <% } %>

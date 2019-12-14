@@ -49,8 +49,10 @@ sidebar: true                      # whether or not using Sidebar.
 sidebar-about-description: "Welcome to visit, I'm Dusign!"
 sidebar-avatar: img/ironman-draw.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
+- search
 - featured-tags
 - short-about
+- visitor
 - recent-posts
 - friends-blog
 - archive
@@ -103,6 +105,7 @@ public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
+photography_dir: photography
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
@@ -179,6 +182,9 @@ deploy:
       coding:
   branch: master
 
+## share
+share: true
+
 # Comment
 ## This comment system is gitment
 ## gitment url: https://github.com/imsun/gitment
@@ -195,13 +201,14 @@ comment:
     enable: false
     username:
 
+## music
+music: true
+
 # Tip
 tip:
   enable: true
-  content: 欢迎访问 <a href="https://www.dusign.net" target="dusign">dusign</a> 的博客,
-        若有问题或者有好的建议欢迎留言，笔者看到之后会及时回复。
-        评论点赞需要github账号登录，如果没有账号的话请点击
-        <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
+  copyright: This is copyright.
+  content: false
 
 # Background effects
 ## If there is no effect after modification, please empty the cache and try again.
@@ -231,10 +238,17 @@ bg_effects:
           ,"rgb(119,195,79)"
           ,"rgb(4,77,34)"
           ,"rgb(122,2,60)"'
-  star:
+  wave:
     enable: true
+
+# Color Theme
+## light , dark or star
+## If you set the value of the `color_theme` to `dark`, set the value of the `highlight_theme` to `night` in `/theme/snail/config.yml`
+## `mouse_control` is only valid for star themes
+color_theme: light
+mouse_control: false
 
 # Visitor statistics
 visitor:
   enable: true
-  type: 
+  type:
