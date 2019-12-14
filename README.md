@@ -91,7 +91,7 @@ description: "A hexo theme"
 keyword: "dusign, hexo-theme-snail"
 header-img: img/header_img/home-bg-1-dark.jpg
 signature: true #show signature
-signature-img: img/signature/Just-do-it-white.png
+signature-img: img/signature/dusign.png
 ```
 
 ### SNS Settings
@@ -111,8 +111,10 @@ sidebar: true                      # whether or not using Sidebar.
 sidebar-about-description: "Welcome to visit, I'm Dusign!"
 sidebar-avatar: img/ironman-draw.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
+- search
 - featured-tags
 - short-about
+- visitor
 - recent-posts
 - friends-blog
 - archive
@@ -167,6 +169,12 @@ deploy:
   branch: master
 ```
 
+### Share
+```yml
+## Share
+share: true
+```
+
 ### Comment
 See https://github.com/imsun/gitment for detailed configuration method.
 ```yml
@@ -174,11 +182,17 @@ See https://github.com/imsun/gitment for detailed configuration method.
 ## This comment system is gitment
 ## gitment url: https://github.com/imsun/gitment
 comment:
-  enable: false
-  owner:
-  repo:
-  client_id:
-  client_secret:
+  gitment:
+    enable: false
+    owner:
+    repo:
+    client_id:
+    client_secret:
+  livere:
+    enable: false
+  disqus:
+    enable: false
+    username:
 ```
 
 ### Tip
@@ -186,13 +200,11 @@ comment:
 # Tip
 tip:
   enable: true
-  content: 欢迎访问 <a href="https://www.dusign.net" target="dusign">dusign</a> 的博客,
-          若有问题或者有好的建议欢迎留言，笔者看到之后会及时回复。
-          评论点赞需要github账号登录，如果没有账号的话请点击 
-          <a href="https://github.com" target="view_window" > github </a> 注册， 谢谢 !
+  copyright: This is copyright.
+  content: false
 ```
 
-### Color Sheme
+### Background effects
 Set the `enable` value of the desired color sheme to `true`. If the value of `bg_effects.star.enable` is `true`, please modify the value of `highlight_theme` in `./themes/snail/_config.yml` to `night`.
 ```yml
 # Background effects
@@ -235,6 +247,16 @@ visitor:
   type: 
 ```
 
+### Color Theme
+```
+# Color Theme
+## light , dark or star
+## If you set the value of the `color_theme` to `dark`, set the value of the `highlight_theme` to `night` in `/theme/snail/config.yml`
+## `mouse_control` is only valid for star themes
+color_theme: light
+mouse_control: false
+```
+
 ### Search
 run `$ npm install hexo-generator-search --save`
 then add the follow configure to `_config.yml`
@@ -261,13 +283,6 @@ solution: `npm install --save hexo-deployer-git`
 Hexo-theme-snail has added the article top function, just add the following content in the article head.
 ```yml
 top: true
-```
-
-### Color Theme
-```
-## Color Theme
-### light , dark or star
-color_theme: light
 ```
 
 ## Releases

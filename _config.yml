@@ -26,7 +26,7 @@ description: "A hexo theme"
 keyword: "dusign, hexo-theme-snail"
 header-img: img/header_img/home-bg-1-dark.jpg
 signature: true #show signature
-signature-img: img/signature/Just-do-it-white.png
+signature-img: img/signature/dusign.png
 
 # SNS settings
 github_username:    dusign
