@@ -297,7 +297,7 @@
 
     Build.prototype.run = function() {
       this.anim();
-      <% if(config['mouse_control']){ %>
+      <% if(config['mouse_tracking']){ %>
       window.addEventListener('mousemove', function(e) {
         this.toX = (e.clientX - this.canvas.width / 2) * -0.8;
         this.toY = (e.clientY - this.canvas.height / 2) * 0.8;

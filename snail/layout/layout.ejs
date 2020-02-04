@@ -7,13 +7,11 @@
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
 
-    <% if(config['bg_effects']['enable']){ %>
-        <!-- background effects start -->
-        <% if(config['color_theme'] == 'star'){ %>
-            <%- partial('_partial/star.ejs') %>
-        <% } %>
-        <!-- background effects end -->
+    <!-- background effects start -->
+    <% if(config['color_theme'] == 'star'){ %>
+        <%- partial('_partial/star.ejs') %>
     <% } %>
+    <!-- background effects end -->
 
 	<%- partial('_partial/header',{cache: true}) %>
 	
@@ -31,7 +29,7 @@
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 
     <% if(config['bg_effects']['enable']){ %>
-        <!-- background effects start -->
+        <!-- background effects line -->
         <% if(config['bg_effects']['line']['enable']){ %>
             <!--<script type="text/javascript" color="<%= config.bg_effects.color %>" pointColor="<%= config.bg_effects.pointColor %>" opacity='<%= config.bg_effects.opacity %>' zIndex="<%= config.bg_effects.zIndex %>" count="<%= config.bg_effects.count %>" src="/js/canvas-nest.js"></script>-->
             <script type="text/javascript" src="/js/line.js"></script>
@@ -44,6 +42,10 @@
         <!-- background effects end -->
     <% } %>
 
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    <% if(config['color_theme'] != 'star'){ %>
+        <script src="/js/ribbonDynamic.js"></script>
+    <% } %>
 </body>
 
 </html>

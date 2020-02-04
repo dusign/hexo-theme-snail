@@ -286,7 +286,12 @@ top: true
 ```
 
 ## Releases
-V1.2
+v1.3
+- fix category jump path issue in sidebar
+- add a default image for new articles
+- add photography (under development)
+
+v1.2
 - fix the bug
 - add search within site
 - top
@@ -294,14 +299,14 @@ V1.2
 - sharing
 - add dark theme
 
-V1.1
+v1.1
 - change title font-family
 - add wordcount
 - add visitor statistics
 - fix the bug (categories not display)
 - replacing mathjax with marked
 
-V1.0
+v1.0
 - fix the bugs
 - add comment system
 - add notice tips

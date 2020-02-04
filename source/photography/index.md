@@ -6,6 +6,44 @@ description: "The greatness of photography is to fix the moment into eternity, A
 header-img: "img/header_img/photography-bg.jpeg"
 comments: true
 ---
-摄影分享功能正在开发中，请大家耐性等待。
 
-关于摄影分享功能有什么好的想法欢迎大家联系我，发邮件或者在任意一个博客下面评论，看到我会及时回复。
+![甬江夜景](photo/yjyj1.jpeg)
+<strong>甬江夜景</strong>
+<em>Shoot by 程仁松 on 2019-12-08</em>
+<span>拍摄于宁波，暂无说明</span>
+
+![甬江夜景](photo/yjyj2.jpeg)
+<strong>甬江夜景</strong>
+<em>Shoot by 程仁松 on 2019-12-08</em>
+<span>拍摄于宁波，暂无说明</span>
+
+![甬江夜景](photo/yjyj3.jpeg)
+<strong>甬江夜景</strong>
+<em>Shoot by 程仁松 on 2019-12-08</em>
+<span>拍摄于宁波，暂无说明</span>
+
+![晚霞](photo/wx.jpeg)
+<strong>晚霞</strong>
+<em>Shoot by dusign on 2019-12-08</em>
+<span>拍摄于宁波，暂无说明</span>
+
+![云彩](photo/yc.jpeg)
+<strong>云彩</strong>
+<em>Shoot by dusign on 2019-12-08</em>
+<span>拍摄于宁波，暂无说明</span>
+
+![绿水青山](photo/lsqs.jpeg)
+<strong>绿水青山</strong>
+<em>Shoot by dusign on 2019-12-08</em>
+<span>拍摄于宁波，暂无说明</span>
+
+![涟漪](photo/ly.jpeg)
+<strong>涟漪</strong>
+<em>Shoot by dusign on 2019-12-08</em>
+<span>拍摄于宁波，暂无说明</span>
+
+![东方明珠](photo/dfmz.jpeg)
+<strong>东方明珠</strong>
+<em>Shoot by dusign on 2019-12-08</em>
+<span>拍摄于上海，暂无说明</span>
+

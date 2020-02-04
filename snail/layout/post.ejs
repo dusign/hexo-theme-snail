@@ -52,6 +52,12 @@ layout: layout
                 <% } %>
                 <!-- tip end -->
 
+                <!-- Music start-->
+                <% if(config['music']){ %>
+                <%- partial('_partial/music') %>
+                <% } %>
+                <!-- Music end -->
+
                 <!-- Sharing -->
                 <% if(config['share']) { %>
                 <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>

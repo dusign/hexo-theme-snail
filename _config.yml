@@ -224,20 +224,10 @@ bg_effects:
     count: 99
   mouse_click:
     enable: true
-    content: '"🌱","just do it","🌾","🍀","don''t give up","🍂","🌻","try it again","🍃","never say die","🌵","🌿","🌴"'
+    content: '"🌱","just do it","🍀"'
     color: '"rgb(121,93,179)"
           ,"rgb(76,180,231)"
-          ,"rgb(184,90,154)"
-          ,"rgb(157,211,250)"
-          ,"rgb(255,0,0)"
-          ,"rgb(242,153,29)"
-          ,"rgb(23,204,16)"
-          ,"rgb(222,0,0)"
-          ,"rgb(22,36,92)"
-          ,"rgb(127,24,116)"
-          ,"rgb(119,195,79)"
-          ,"rgb(4,77,34)"
-          ,"rgb(122,2,60)"'
+          ,"rgb(184,90,154)"'
   wave:
     enable: true
 
