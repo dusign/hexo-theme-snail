@@ -221,20 +221,10 @@ bg_effects:
     count: 99
   mouse_click:
     enable: true
-    content: '"🌱","just do it","🌾","🍀","don''t give up","🍂","🌻","try it again","🍃","never say die","🌵","🌿","🌴"'
+    content: '"🌱","just do it","🍀"'
     color: '"rgb(121,93,179)"
           ,"rgb(76,180,231)"
-          ,"rgb(184,90,154)"
-          ,"rgb(157,211,250)"
-          ,"rgb(255,0,0)"
-          ,"rgb(242,153,29)"
-          ,"rgb(23,204,16)"
-          ,"rgb(222,0,0)"
-          ,"rgb(22,36,92)"
-          ,"rgb(127,24,116)"
-          ,"rgb(119,195,79)"
-          ,"rgb(4,77,34)"
-          ,"rgb(122,2,60)"'
+          ,"rgb(184,90,154)"'
   wave:
     enable: true
 ```
@@ -287,23 +277,24 @@ top: true
 
 ## Releases
 v1.3
-- fix category jump path issue in sidebar
+- fix *category* jump path issue in sidebar
 - add a default image for new articles
-- add photography (under development)
+- add *photography* (under development)
+- fix *top* and *page* conflict
 
 v1.2
 - fix the bug
-- add search within site
-- top
+- add *search* within site
+- add *top*
 - image wave effect
-- sharing
+- add *share*
 - add dark theme
 
 v1.1
 - change title font-family
-- add wordcount
+- add *wordcount*
 - add visitor statistics
-- fix the bug (categories not display)
+- fix the bug (*categories* not display)
 - replacing mathjax with marked
 
 v1.0

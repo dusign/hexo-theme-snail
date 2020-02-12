@@ -10,10 +10,7 @@ tags:
 - hexo-theme-snail
 - snail
 - hexo
-catagories:
-- dusign
-- hexo-theme-snail
-- snail
+categories:
 - hexo
 ---
 # hexo-theme-snail
