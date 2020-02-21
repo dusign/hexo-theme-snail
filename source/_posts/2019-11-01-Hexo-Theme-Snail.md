@@ -6,10 +6,7 @@ date: 2019-11-01 22:02:12
 subtitle: A succinct hexo theme.
 header-img: snail-bg.jpg
 tags:
-- dusign
 - hexo-theme-snail
-- snail
-- hexo
 categories:
 - hexo
 ---
