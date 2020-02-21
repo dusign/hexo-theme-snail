@@ -33,10 +33,12 @@
                         </li>
                         <% } %>
                     <% }); %>
-
+                    
+                    <% if(config['chinese_blog']['enable']){ %>
                     <li>
-                        <a href="https://blog.csdn.net/d_Nail" target="_blank">Chinese Blog</a>
+                        <a href="<%- config.chinese_blog.url %>" target="_blank">Chinese Blog</a>
                     </li>
+                    <% } %>
                 </ul>
             </div>
         </div>

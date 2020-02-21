@@ -242,3 +242,8 @@ mouse_control: false
 visitor:
   enable: true
   type:
+
+# Chinese Blog
+chinese_blog:
+  enable: true
+  url: https://blog.csdn.net/d_Nail
