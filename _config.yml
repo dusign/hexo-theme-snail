@@ -246,4 +246,4 @@ visitor:
 # Chinese Blog
 chinese_blog:
   enable: true
-  url: https://blog.csdn.net/d_Nail
+  url: YOUR_CHINESE_BLOG_URL

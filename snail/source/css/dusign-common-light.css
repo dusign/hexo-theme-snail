@@ -119,14 +119,17 @@
 	font-size:12px;
 }
 /* Top */
+.post-title{
+	position:relative;
+}
 .top_logo{
 	height:30px;
 	width:30px;
 	margin:0px;
 	padding:0px;
 	position:absolute;
-	top:-7px;
-	left:0px;
+	top:-37px;
+	left:-15px;
 	cursor:default!important;
 }
 /* gitment */
