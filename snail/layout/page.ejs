@@ -31,13 +31,11 @@ layout: layout
                 </section>
                 <% }%>
 
-
                 <!-- Friends Blog -->
                 <% if(config.friends) { %>
                 <hr>
                 <h5>FRIENDS</h5>
                 <ul class="list-inline">
-
                     <% config.friends.forEach(function(friend){ %>
                         <li><a href="<%= friend.href %>"><%= friend.title %></a></li>
                     <% }); %>

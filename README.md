@@ -3,15 +3,15 @@
 
 **Light theme preview**
 
-![hexo-theme-snail](./img/snail-light.png)
+![hexo-theme-snail](snail-light.png)
 
 **Dark theme preview**
 
-![hexo-theme-snail](./img/snail-dark.png)
+![hexo-theme-snail](snail-dark.png)
 
 **Star theme preview**
 
-![hexo-theme-snail](./img/snail-star.png)
+![hexo-theme-snail](snail-star.png)
 
 Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, that can be set according to your own preferences in the settings, and also has the functions of sharing and commenting. More features are under development.
 
@@ -37,6 +37,7 @@ $ hexo init blog
 ```bash
 $ cd blog
 $ rm -rf source
+$ rm -rf scaffolds
 $ rm _config.yml package.json README.md LICENSE
 $ git clone https://github.com/dusign/hexo-theme-snail.git
 $ mv ./hexo-theme-snail/snail ./themes
@@ -276,6 +277,11 @@ top: true
 ```
 
 ## Releases
+v1.4
+- hide sidebar when *toc* is empty
+- change the music library to NetEase music library
+- add a function that can stop *toc* automatic numbering
+
 v1.3
 - fix *category* jump path issue in sidebar
 - add a default image for new articles

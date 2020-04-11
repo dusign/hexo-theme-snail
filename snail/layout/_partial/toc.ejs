@@ -6,7 +6,11 @@
           <div id="toc" class="toc-article">
           <strong class="toc-title"><%= __('Contents') %></strong>
           <% if (toc(page.content) != ""){ %>
-            <%- toc(page.content, { "class": "toc-nav" }) %>
+            <% if (page.tocnum == false) { %>
+              <%- toc(page.content, { "class": "toc-nav", list_number: false }) %>
+            <% } else { %>
+              <%- toc(page.content, { "class": "toc-nav" }) %>
+            <% } %>
           <% } else { %>
             <ol class="nav"><%= __('none') %></ol>
           <% } %>
