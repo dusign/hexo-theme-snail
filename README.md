@@ -276,11 +276,23 @@ Hexo-theme-snail has added the article top function, just add the following cont
 top: true
 ```
 
+### Music Player
+```yml
+## music
+### netease; qqkg;
+### if your `library` is `qqkg`, please set `music` as the song url
+music:
+  enable: true
+  library: netease
+  music: https://kg.qq.com/node/play?s=7deFpz7Z26Jmv7di&g_f=share_html
+```
+
 ## Releases
 v1.4
 - hide sidebar when *toc* is empty
 - change the music library to NetEase music library
 - add a function that can stop *toc* automatic numbering
+- increase music library
 
 v1.3
 - fix *category* jump path issue in sidebar
