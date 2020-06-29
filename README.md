@@ -3,15 +3,15 @@
 
 **Light theme preview**
 
-![hexo-theme-snail](snail-light.png)
+![hexo-theme-snail](img/snail-light.png)
 
 **Dark theme preview**
 
-![hexo-theme-snail](snail-dark.png)
+![hexo-theme-snail](img/snail-dark.png)
 
 **Star theme preview**
 
-![hexo-theme-snail](snail-star.png)
+![hexo-theme-snail](img/snail-star.png)
 
 Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, that can be set according to your own preferences in the settings, and also has the functions of sharing and commenting. More features are under development.
 
