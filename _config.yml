@@ -95,7 +95,8 @@ friends: [
 
 math:
   enable: true
-  engine: mathjax
+  # cdn: 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js'
+  engine: mathjax2
 
 #Custom Setting End
 
