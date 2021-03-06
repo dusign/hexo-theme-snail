@@ -1,4 +1,10 @@
 /* dark start */
+@media screen and (max-width: 767px) {
+  .highlight .table-responsive {
+    border: none;
+    margin-bottom: 0;
+  }
+}
 body{
   background: rgb(34, 38, 49);
   color: rgb(97, 101, 111); /* 普通文字颜色 rgb(97, 101, 111) */
@@ -202,7 +208,7 @@ a img:focus {
   cursor: zoom-in;
 }
 article {
-  /*overflow-x: hidden;*/
+  overflow: hidden;
 }
 blockquote {
   color: #808080;
@@ -650,6 +656,10 @@ pre code {
 .post-preview > .post-meta > a:focus {
   color: #0085a1;
   text-decoration: underline;
+}
+.post-preview {
+  word-wrap: break-word;
+  word-break: break-all;
 }
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
