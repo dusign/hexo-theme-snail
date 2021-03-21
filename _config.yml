@@ -97,6 +97,9 @@ math:
   enable: true
   engine: mathjax
 
+mathjax:
+  cdn: 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js'
+
 #Custom Setting End
 
 # Directory
