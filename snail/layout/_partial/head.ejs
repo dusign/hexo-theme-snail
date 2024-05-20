@@ -1,64 +1,64 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
-    <meta name="baidu-site-verification" content="093lY4ziMu" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="description" content="<%= config.description %>">
-    <meta name="keyword"  content="<%= config.keyword %>">
-    <link rel="shortcut icon" href="<%= config.root %>img/ironman-draw.png">
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
-    <title>
-        <% if (page.title) { %>
-          <%= page.title + ' - ' + config.SEOTitle %>
-        <% } else{%>
-          <%= config.SEOTitle %>
-        <% } %>
-    </title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="google-site-verification"
+    content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"
+  />
+  <meta name="baidu-site-verification" content="093lY4ziMu" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+  <meta name="description" content="<%= config.description %>" />
+  <meta name="keyword" content="<%= config.keyword %>" />
+  <link rel="shortcut icon" href="<%= config.root %>img/ironman-draw.png" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+  />
+  <link rel="stylesheet" href="/css/walineRoot.css" />
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+  <title>
+    <% if (page.title) { %> <%= page.title + ' - ' + config.SEOTitle %> <% }
+    else{%> <%= config.SEOTitle %> <% } %>
+  </title>
 
-    <link rel="canonical" href="<%= config.url + config.root + (page.path||'').replace('index.html', '') %>">
+  <link
+    rel="canonical"
+    href="<%= config.url + config.root + (page.path||'').replace('index.html', '') %>"
+  />
 
-    <!-- Bootstrap Core CSS -->
-    <%- css('css/bootstrap.min.css') %>
+  <!-- Bootstrap Core CSS -->
+  <%- css('css/bootstrap.min.css') %>
 
-    <!-- Custom CSS --> 
-    <% if(config['color_theme'] == 'star'){ %>
-        <!-- background effects start -->
-        <%- css('css/dusign-dark.css')%>
-        <%- css('css/dusign-common-dark.css') %>
-        <%- css('css/font-awesome.star.css')%>
-        <%- css('css/toc')%>
-    <% }else if(config['color_theme'] == 'dark'){ %>
-        <%- css('css/dusign-dark.css')%>
-        <%- css('css/dusign-common-dark.css') %>
-        <%- css('css/font-awesome.css')%>
-        <%- css('css/toc')%>
-    <% }else{ %>
-        <%- css('css/dusign-light.css')%>
-        <%- css('css/dusign-common-light.css') %>
-        <%- css('css/font-awesome.css')%>
-        <%- css('css/toc')%>
-        <!-- background effects end -->
-    <% } %>
-    
-    <!-- Pygments Highlight CSS -->
-    <%- css('css/highlight') %>
+  <!-- Custom CSS -->
+  <% if(config['color_theme'] == 'star'){ %>
+  <!-- background effects start -->
+  <%- css('css/dusign-dark.css')%> <%- css('css/dusign-common-dark.css') %> <%-
+  css('css/font-awesome.star.css')%> <%- css('css/toc')%> <% }else
+  if(config['color_theme'] == 'dark'){ %> <%- css('css/dusign-dark.css')%> <%-
+  css('css/dusign-common-dark.css') %> <%- css('css/font-awesome.css')%> <%-
+  css('css/toc')%> <% }else{ %> <%- css('css/dusign-light.css')%> <%-
+  css('css/dusign-common-light.css') %> <%- css('css/font-awesome.css')%> <%-
+  css('css/toc')%>
+  <!-- background effects end -->
+  <% } %>
 
-    <%- css('css/widget') %>
+  <!-- Pygments Highlight CSS -->
+  <%- css('css/highlight') %> <%- css('css/widget') %> <%- css('css/rocket') %>
+  <%- css('css/signature') %> <%- css('css/fonts.googleapis.css') %>
 
-    <%- css('css/rocket') %>
+  <link
+    rel="stylesheet"
+    href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css"
+  />
 
-    <%- css('css/signature') %>
+  <!-- photography -->
+  <%- css('css/photography') %>
 
-    <%- css('css/fonts.googleapis.css') %>
-
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <!-- photography -->
-    <%- css('css/photography') %>
-
-    <!-- ga & ba script hoook -->
-    <script></script>
+  <!-- ga & ba script hoook -->
+  <script></script>
 </head>

@@ -4,15 +4,16 @@
 
 # Site
 title: Super Snail
-subtitle: At the bottom of the well, it is destined to see only the sky at the wellhead. 
-          However, the starting point only affects the process of reaching your peak and does not determine the height you reach.
+subtitle:
+  At the bottom of the well, it is destined to see only the sky at the wellhead.
+  However, the starting point only affects the process of reaching your peak and does not determine the height you reach.
 author: Dusign
 language: en
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://dusign.net       # Note: don't forget to modify the CNAME file to your url
+url: https://dusign.net # Note: don't forget to modify the CNAME file to your url
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -29,34 +30,34 @@ signature: true #show signature
 signature-img: img/signature/dusign.png
 
 # SNS settings
-github_username:    dusign
-twitter_username:   dusignr
-facebook_username:  Gang Du
+github_username: dusign
+twitter_username: dusignr
+facebook_username: Gang Du
 zhihu_username: dusignr
 
 # Build settings
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
 
 # Analytics settings
 # Baidu Analytics
 # ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
-ga_track_id: 'UA-XXXXXXXX-X'          # Format: UA-xxxxxx-xx
+ga_track_id: "UA-XXXXXXXX-X" # Format: UA-xxxxxx-xx
 ga_domain: yoursite
 
 # Sidebar settings
-sidebar: true                      # whether or not using Sidebar.
+sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "Welcome to visit, I'm Dusign!"
-sidebar-avatar: img/ironman-draw.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: img/ironman-draw.png # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
-- search
-- featured-tags
-- short-about
-- visitor
-- recent-posts
-- friends-blog
-- archive
-- category
+  - search
+  - featured-tags
+  - short-about
+  - visitor
+  - recent-posts
+  - friends-blog
+  - archive
+  - category
 
 ## Search
 search:
@@ -67,31 +68,21 @@ search:
 
 # widget behavior
 ## Archive
-archive_type: 'monthly'
+archive_type: "monthly"
 show_count: true
 
-
 ## Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
-
+featured-tags: true # whether or not using Feature-Tags
+featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
 
 ## Friends
-friends: [
-    {
-        title: "Dusign's Blog",
-        href: "https://blog.csdn.net/d_Nail"
-    },{
-        title: "Dusign's Web",
-        href: "#"
-    },{
-        title: "Dusign's Github",
-        href: "https://github.com/dusign"
-    },{
-        title: "Other",
-        href: "#"
-    }
-]
+friends:
+  [
+    { title: "Dusign's Blog", href: "https://blog.csdn.net/d_Nail" },
+    { title: "Dusign's Web", href: "#" },
+    { title: "Dusign's Github", href: "https://github.com/dusign" },
+    { title: "Other", href: "#" },
+  ]
 
 math:
   enable: true
@@ -149,7 +140,7 @@ archive_generator:
   yearly: true
   monthly: true
   daily: false
-  
+
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
 markdown:
@@ -159,8 +150,8 @@ markdown:
     breaks: true
     linkify: true
     typographer: true
-    quotes: '“”‘’'
-  
+    quotes: "“”‘’"
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
@@ -178,8 +169,8 @@ path: baidusitemap.xml
 deploy:
   type: git
   repo:
-      github:
-      coding:
+    github:
+    coding:
   branch: master
 
 ## share
@@ -200,6 +191,11 @@ comment:
   disqus:
     enable: false
     username:
+  waline:
+    enable: false
+    url: 
+    reaction: false
+    emoji: []
 
 ## music
 ### netease; qqkg;
@@ -231,8 +227,8 @@ bg_effects:
     enable: true
     content: '"🌱","just do it","🍀"'
     color: '"rgb(121,93,179)"
-          ,"rgb(76,180,231)"
-          ,"rgb(184,90,154)"'
+      ,"rgb(76,180,231)"
+      ,"rgb(184,90,154)"'
   wave:
     enable: true
 
